@@ -6,8 +6,9 @@ from time import sleep
 import sys
 
 use_real_random = True
-if not sys.argv[0]:
-    use_real_random=bool(sys.argv[0])
+if len(sys.argv)>1:
+    if sys.argv[1] == "0":
+        use_real_random=False
 
 two_chars = ['朱砂', '天下', '杀伐', '人家', '韶华', '风华', '繁华', '血染', '墨染', '白衣', '素衣', '嫁衣',
              '倾城', '孤城', '空城', '旧城', '半城', '旧人', '伊人', '心疼', '春风', '古琴', '无情', '迷离',
